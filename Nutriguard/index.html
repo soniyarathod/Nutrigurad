@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriGuard Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <img src="images/logo img.jpg">
+        <a href="#home" class="logo">NutriGuard</a>
+        
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#form">Form</a>
+            <a href="#services">Services</a>
+            <a href="#expert">Expert Q&A</a>
+            <a href="#contact">Contact</a>
+            
+        </nav>
+        
+    </header>
+
+
+    <!--Home Section-->
+    
+    <section class="home" id="home">
+        <div class="container home-container">
+            <div class="home-img">
+                <img src="images/homeimg.jpg" alt="Home image" />
+            </div>
+        </div>
+        <div class="home-content">
+            <h1>Hello, Welcome to <span class="highlight">NutriGuard</span></h1>
+            <p>Your AI-Powered Guide to Healthier Living</p>
+            <p>Discover personalized dietary recommendations to meet your unique 
+                health needs and goals.Whether you're aiming to lose weight, 
+                build muscle, or just maintain a healthy lifestyle,
+                 Nutri Guard is here to guide you every step of the way.</p>
+            
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+    <!--About Section-->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-img">
+                <img src="images/about1.jpg" alt="About image">
+                <img src="images/about2.jpg">
+                <img src="images/about3.jpg">
+            </div>
+        </div>
+        <div class="about-content">
+            <h2>About NutriGuard</h2>
+            <p>NutriGuard is an innovative AI-driven solution designed to provide you with dynamic 
+                and personalized dietary recommendations. Our cutting-edge technology takes 
+                into account your individual health profile, dietary preferences, and real-time 
+                feedback to help you achieve your health goals efficiently.
+                By considering factors like age, weight, height, activity level, and goals, 
+                NutriGuard creates detailed health profiles to deliver the most relevant advice.
+                Utilizing advanced AI algorithms and machine learning, the system continuously analyzes
+                your health data to provide up-to-date recommendations. The more you use NutriGuard,
+                the better it understands your needs, adjusting its suggestions in real-time for optimal guidance. 
+            </p>
+            <a href="#services" class="btn">Our Services</a>
+        </div>
+    </section>
+    <!--Form Section-->
+    <section class="form-section" id="form">
+        <div class="container main-container">
+            <h2>Fill Out the Form</h2>
+            <form action="diet-recommendation.html" method="get">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+            
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" required>
+            
+                <label for="activityLevel">Activity Level:</label>
+                <select id="activityLevel" name="activityLevel" required>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                </select>
+            
+                <label for="goal">Set Your Goal:</label>
+                <select id="goal" name="goal" required>
+                    <option value="loseWeight">Lose Weight</option>
+                    <option value="maintainWeight">Maintain Weight</option>
+                    <option value="gainWeight">Gain Weight</option>
+                    <option value="gainMuscle">Gain Muscle</option>
+                    <option value="modifyDiet">Modify My Diet</option>
+                    <option value="manageStress">Manage Stress</option>
+                    <option value="increaseCount">Increase Count</option>
+                </select>
+            
+                <button type="submit">Get Diet Recommendation</button>
+            </form>
+        </div>
+    </section>
+    
+
+            <!--Services Page-->
+            <section id="services">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <img src="images/service3.jpeg" alt="Personalized Meal Plans">
+                        <h3>Personalized Meal Plans</h3>
+                        <p>Get meal plans tailored to your health profile, dietary needs, and personal preferences.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/service2.jpeg" alt="Real-Time Recommendations">
+                        <h3>Real-Time Recommendations</h3>
+                        <p>Receive instant dietary advice based on your activity levels and health data.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/service1.jpg" alt="Health Tracking">
+                        <h3>Health Tracking</h3>
+                        <p>Monitor your progress and adjust your goals with our comprehensive health tracking tools.</p>
+                    </div>
+                </div>
+            
+            <section id="testimonials">
+                <h2>Clients Say About Our NutriGuard System</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-item">
+                        <p>"NutriGuard has completely transformed my eating habits! The personalized meal plans are fantastic."</p>
+                        <h3>Arpita Patil</h3>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"The real-time recommendations are a game changer. I feel healthier and more energized every day."</p>
+                        <h3>Ajay Runwal</h3>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"I love how NutriGuard adapts to my changing health data. It's like having a personal nutritionist."</p>
+                        <h3>Aishwarya</h3>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"NutriGuard's AI-powered insights are incredibly accurate. I've seen great results in just a few weeks."</p>
+                        <h3>Aryan Oswal</h3>
+                    </div>
+                </div>
+            </section>
+            </section>
+            
+            <section id="expert">
+                <div class="expert-container">
+                    <h2>Expert Q&A</h2>
+                    <p>Have a question about nutrition or diet? Our team of experts is here to help. Browse through frequently asked questions or submit your own.</p>
+                    <div class="faq">
+                        <h3>Frequently Asked Questions</h3>
+                        <ul>
+                            <li>
+                                <h4>What is NutriGuard?</h4>
+                                <p>NutriGuard is an AI-driven solution providing personalized dietary recommendations based on individual health profiles.</p>
+                            </li>
+                            <li>
+                                <h4>How does NutriGuard work?</h4>
+                                <p>NutriGuard uses advanced AI models to analyze your health data and preferences, delivering tailored meal plans and advice.</p>
+                            </li>
+                            <li>
+                                <h4>Can I customize my meal plans?</h4>
+                                <p>Yes, NutriGuard allows you to customize meal plans according to your dietary preferences and health goals.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <form id="questionForm">
+                        <h3>Submit Your Question</h3>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="question">Your Question:</label>
+                        <textarea id="question" name="question" required></textarea>
+                        
+                        <button type="button" onclick="submitQuestion()">Submit</button>
+                    </form>
+                </div>
+            </section>
+            
+            <!--Contact Page-->
+            <section id="contact">
+                <div>
+                    <h1>Contact Us</h1>
+                    <p>We’d love to hear from you! Whether you have a question about our services or just want to say hi, feel free to reach out.</p>
+                    <form id="contactForm">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                        
+                        <button type="button" onclick="submitForm()">Send Message</button>
+                    </form>
+                </div>
+            </section>
+            
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-left">
+                        <p>&copy; 2024 NutriGuard. All rights reserved.</p>
+                    </div>
+                    <div class="footer-center">
+                        <p>Contact us: info@nutriguard.com | +1 234 567 890</p>
+                    </div>
+                    <div class="footer-right">
+                        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </footer>
+            
+            </body>
+            
+            </html> i want this should be including AI- ML model which can suggest the recommenadation 

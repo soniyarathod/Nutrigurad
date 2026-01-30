@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            padding: 20px;
+        }
+
+        .recommendation-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #444;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .btn-back:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="recommendation-container">
+        <h2>Your Personalized Diet Recommendation</h2>
+        <ul id="recommendationDetails"></ul>
+        <a href="index.html" class="btn-back">Back to Home</a>
+    </div>
+
+    <script>
+        // Extract query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const age = urlParams.get("age");
+        const weight = urlParams.get("weight");
+        const height = urlParams.get("height");
+        const activityLevel = urlParams.get("activityLevel");
+        const goal = urlParams.get("goal");
+
+        // Generate a basic diet recommendation based on the inputs
+        const recommendations = {
+            loseWeight: "Follow a calorie-deficit diet with a focus on lean proteins, whole grains, and vegetables. Avoid sugary and processed foods.",
+            maintainWeight: "Eat a balanced diet with equal proportions of carbs, proteins, and fats. Stay hydrated and include light activity.",
+            gainWeight: "Increase calorie intake with nutrient-dense foods like nuts, seeds, and avocados. Focus on strength training.",
+            gainMuscle: "Follow a high-protein diet with regular strength training. Include foods like chicken, fish, and legumes.",
+            modifyDiet: "Incorporate more whole foods and reduce processed food intake. Ensure your meals are balanced.",
+            manageStress: "Focus on foods rich in magnesium and omega-3s like nuts, seeds, and fatty fish. Include stress-relieving activities.",
+            increaseCount: "Eat nutrient-dense foods in smaller portions throughout the day. Stay hydrated and avoid heavy meals."
+        };
+
+        // Populate the diet recommendation details
+        const recommendationDetails = document.getElementById("recommendationDetails");
+
+        // Check for missing data and handle it gracefully
+        if (age && weight && height && activityLevel && goal) {
+            recommendationDetails.innerHTML = `
+                <li><strong>Age:</strong> ${age}</li>
+                <li><strong>Weight:</strong> ${weight} kg</li>
+                <li><strong>Height:</strong> ${height} cm</li>
+                <li><strong>Activity Level:</strong> ${activityLevel.charAt(0).toUpperCase() + activityLevel.slice(1)}</li>
+                <li><strong>Goal:</strong> ${goal.replace(/([A-Z])/g, " $1").trim()}</li>
+                <li><strong>Diet Recommendation:</strong> ${recommendations[goal] || "No specific recommendation available for this goal."}</li>
+            `;
+        } else {
+            recommendationDetails.innerHTML = `
+                <li><strong>Error:</strong> Missing or invalid data. Please go back and fill out the form correctly.</li>
+            `;
+        }
+    </script>
+</body>
+</html>
